@@ -1,0 +1,106 @@
+# 京东登录辅助
+# hostname = plogin.m.jd.com,home.m.jd.com 
+#^https?:\/\/home\.m\.jd\.com\/userinfom\/QueryUserInfoM url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+#^https?:\/\/plogin\.m\.jd\.com\/login\/login url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+
+#!name=京东登录辅助
+#!desc=京东+京喜账号CK辅助登陆(UI2) 2021/07/12 13:11
+#!system=ios
+hostname = %INSERT% m.jd.com, plogin.m.jd.com, home.m.jd.com, wqs.jd.com, wq.jd.com, wqsd.jd.com,wqsh.jd.com, p.m.jd.com, bean.m.jd.com, item.m.jd.com, shop.m.jd.com, shopmember.m.jd.com, cardpackage.jd.com, coupon.m.jd.com, m.jingxi.com, u.jingxi.com, st.jingxi.com, actst.jingxi.com, h5.m.jd.com, jdsupermarket.jd.com, wbbny.m.jd.com, prodev.m.jd.com, try.m.jd.com
+
+
+## 京东系列 ##
+#京东首页
+^https??:\/\/m\.jd\.com url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京东登陆
+^https?:\/\/plogin\.m\.jd\.com url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京东我的
+^https?:\/\/home\.m\.jd\.com\/(myJd\/newhome\.action|userinfom\/QueryUserInfoM)  url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京东订单
+^https?:\/\/wqs\.jd\.com\/order\/orderlist_merge\.shtml url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京东下单
+^https?:\/\/wq\.jd\.com\/deal\/confirmorder url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京东购物
+^https?:\/\/p\.m\.jd\.com\/cart\/cart\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京豆明细
+^https?:\/\/bean\.m\.jd\.com\/beanDetail\/index\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京东商品
+^https?:\/\/item\.m\.jd\.com\/(product\/\d+\.html|ware\/view.action\?wareId=\d+|item\/jxview\?skuId=\d+) url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京东店铺
+^https?:\/\/shop\.m\.jd\.com\/(shopv2\/mzpage|\?shopId) url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京东入会
+^https?:\/\/shopmember\.m\.jd\.com\/shopcard\/\?venderId=\d+ url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京东销卡
+^https?:\/\/cardpackage\.jd\.com url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#领券中心
+^https?:\/\/coupon\.m\.jd\.com\/center\/getCouponCenter\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#签到日历
+^https?:\/\/bean\.m\.jd\.com\/bean\/signIndex\.action url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#切换修复
+^https?:\/\/plogin\.m\.jd\.com\/cgi-bin\/mm\/dom(sms)?login url script-response-body https://raw.githubusercontent.com/id77/QuantumultX/master/Script/unHttpOnly.js
+
+#京东活动
+^https?:\/\/h5\.m\.jd\.com\/babelDiy\/Zeus\/\w+\/index\.html url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京东红包
+^https?:\/\/wqs\.jd\.com\/my\/redpacket\.shtml url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京东超市
+^https?:\/\/jdsupermarket\.jd\.com\/game url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#燃动夏季
+^https?:\/\/wbbny\.m\.jd\.com\/babelDiy\/Zeus\/2rtpffK8wqNyPBH6wyUDuBKoAbCt\/index\.html url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#任务中心
+^https?:\/\/prodev\.m\.jd.com\/mall\/active\/\w+\/index\.html url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京东试用
+^https?:\/\/try\.m\.jd\.com\/(user|activities) url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+
+## 京喜系列 ##
+#京喜首页
+^https?:\/\/m\.jingxi\.com\/mcoss\/wxmall\/home url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京喜商品
+^https?:\/\/wq\.jd.com\/item url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京喜购物
+^https?:\/\/u\.jingxi\.com\/cart\/mycart\?fromnav url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京喜我的
+^https?:\/\/st\.jingxi\.com\/pingou\/account\/index\.html url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京喜订单
+^https?:\/\/st\.jingxi\.com\/order\/orderlist_merge\.shtml url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京喜下单
+^https?:\/\/(wqs\.jd\.com\/order\/s_confirm_app\.shtml|m\.jingxi\.com\/deal\/minfo\/confirmorder|m\.jingxi\.com\/deal\/confirmorder\/main) url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京喜农场
+^https?:\/\/(actst\.jingxi\.com|wqsh\.jd\.com)\/sns\/201912\/12\/jxnc\/detail\.html url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京喜财富
+^https?:\/\/st\.jingxi\.com\/fortune_island\/index2?\.html url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京喜工厂
+^https?:\/\/(actst\.jingxi\.com|wqsd\.jd\.com)\/pingou\/dream_factory url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+#京喜牧场
+^https?:\/\/wqs\.jd\.com\/pingou\/jxmc\/index\.html url script-response-body https://raw.githubusercontent.com/dompling/Script/master/jd/jd_login_help2.js
+
+
