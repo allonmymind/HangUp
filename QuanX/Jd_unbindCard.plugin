@@ -1,0 +1,4 @@
+## 注销京东开卡会员
+hostname = shopmember.m.jd.com
+# Jd_unbindCard
+^https:\/\/shopmember\.m\.jd\.com\/shopcard\/\?(venderId=[0-9]+).* url 302 https:\/\/shopmember\.m\.jd\.com\/member\/memberCloseAccount\?$1
