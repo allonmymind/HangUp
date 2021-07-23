@@ -1,6 +1,5 @@
 # IOS QuanX Task配置 
 
-
 # 京东资产变动通知
  2 9 * * * https://raw.githubusercontent.com/allonmymind/HangUp/main/jd_bean_change.js, tag=京东资产变动通知
 
@@ -87,12 +86,6 @@
 
 # 宠汪汪赛跑
  15 10 * * * https://raw.githubusercontent.com/allonmymind/HangUp/main/jd_joy_run.js, tag=宠汪汪邀请助力与赛跑助力
-
-# 宠汪汪助力更新Token
-http-response ^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/api\/user\/addUser\?code=  https://raw.githubusercontent.com/allonmymind/HangUp/main/jd_joy_run.js, requires-body=true, timeout=10, tag=宠汪汪助力更新Token
-
-# 宠汪汪助力获取Token
-http-request ^https:\/\/draw\.jdfcloud\.com(\/mirror)?\/\/api\/user\/user\/detail\?openId=  https://raw.githubusercontent.com/allonmymind/HangUp/main/jd_joy_run.js, timeout=3600, tag=宠汪汪助力获取Token
 
 # 宠汪汪偷好友积分与狗粮
  10 0-21/3 * * * https://raw.githubusercontent.com/allonmymind/HangUp/main/jd_joy_steal.js,tag=宠汪汪偷好友积分与狗粮
