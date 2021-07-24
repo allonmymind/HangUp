@@ -2,7 +2,7 @@
 #Cookie获取成功后在重写里禁用掉本订阅
 #Cookie失效时在重写里启用本订阅
 
-hostname = api.m.jd.com, me-api.jd.com, draw.jdfcloud.com, jdjoy.jd.com, account.huami.com, www.xiaodouzhuan.cn, c.tieba.baidu.com, ms.jr.jd.com
+hostname = api.m.jd.com, me-api.jd.com, draw.jdfcloud.com, jdjoy.jd.com, account.huami.com, www.xiaodouzhuan.cn, c.tieba.baidu.com, ms.jr.jd.com, wq.jd.com, m.jingxi.com
 
 # 获取京东Cookie
 https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
@@ -25,8 +25,13 @@ https:\/\/me-api\.jd\.com\/user_new\/info\/GetJDUserInfoUnion url script-request
 # 聚看点cookie
 https:\/\/www\.xiaodouzhuan\.cn\/jkd\/newMobileMenu\/infoMe\.action url script-request-body https://raw.githubusercontent.com/allonmymind/HangUp/main/Else/jkd.js
 
-#金融领豆获取Cookie
+# 金融领豆获取Cookie
 ^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/uc\/newna\/m\/userstat  url script-request-header https://raw.githubusercontent.com/dompling/Script/master/jd/jd_jr_cookie.js
 
-#贴吧签到
+# 贴吧签到
 https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/BDTieBa-DailyBonus/TieBa.js
+
+# 京喜获取Token
+^https\:\/\/wq\.jd\.com\/cubeactive\/farm\/dotask url script-request-header https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
+^https\:\/\/m\.jingxi\.com\/dreamfactory\/generator\/CollectCurrentElectricity url script-request-header https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
+^https\:\/\/m\.jingxi\.com\/jxcfd\/consume\/CashOut url script-request-header https://raw.githubusercontent.com/whyour/hundun/master/quanx/jx_tokens.js
