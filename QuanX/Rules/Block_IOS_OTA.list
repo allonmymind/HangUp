@@ -1,0 +1,7 @@
+#屏蔽IOS OTA#
+HOST, mesu.apple.com,Block_IOS_OTA
+HOST,appldnld.apple.com,Block_IOS_OTA
+HOST,xp.apple.com,Block_IOS_OTA
+HOST,gdmf.apple.com,Block_IOS_OTA
+HOST,ipsw.me,Block_IOS_OTA
+HOST,updates-http.cdn-apple.com,Block_IOS_OTA
