@@ -1,0 +1,42 @@
+{
+    "name": "Sunert Task gallery", 
+    "description": "https://github.com/Sunert/Script", 
+    "task": [
+        {
+            "config": "0 0 7,22 * * * https://raw.githubusercontent.com/allonmymind/SS/Sunert/Task/dianshijia.js, tag=电视家, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/dianshijia.png, enabled=true", 
+            "addons": "https://raw.githubusercontent.com/allonmymind/SS/Sunert/TaskConf/dianshijia/qx_rewite.txt, tag=电视家, update-interval=-1, opt-parser=false, enabled=true"
+        }, 
+        {
+            "config": "0 11 8 * * * https://raw.githubusercontent.com/allonmymind/SS/Sunert/Task/kuaishou.js, tag=快手, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/kuaishou.png, enabled=true", 
+            "addons": "https://raw.githubusercontent.com/allonmymind/SS/Sunert/TaskConf/kuaishou/qx_rewite.txt, tag=快手, update-interval=-1, opt-parser=false, enabled=true"
+        }, 
+        {
+            "config": "0 11 8 * * * https://raw.githubusercontent.com/allonmymind/SS/Sunert/Task/weibo.js, tag=微博&钱包, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/weibo.png, enabled=true", 
+            "addons": "https://raw.githubusercontent.com/allonmymind/SS/Sunert/TaskConf/sina/qx_rewite.txt, tag=微博, update-interval=-1, opt-parser=false, enabled=true"
+        }, 
+        {
+            "config": "20 11 8 * * * https://raw.githubusercontent.com/allonmymind/SS/Sunert/Task/youth.js, tag=中青看点极速版, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true", 
+            "addons": "https://raw.githubusercontent.com/allonmymind/SS/Sunert/TaskConf/youth/qx_rewite.txt, tag=中青看点, update-interval=-1, opt-parser=false, enabled=true"
+        }, 
+        {
+            "config": "20 15 */2 * * * https://raw.githubusercontent.com/allonmymind/SS/Sunert/Task/Youth_Read.js, tag=中青自动阅读, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true", 
+            "addons": "https://raw.githubusercontent.com/allonmymind/SS/Sunert/TaskConf/youth/qx_youthread.txt, tag=中青阅读, update-interval=-1, opt-parser=false, enabled=true"
+        }, 
+        {
+            "config": "20 5 10 * * * https://raw.githubusercontent.com/allonmymind/SS/Sunert/Task/youth_gain.js, tag=中青浏览赚, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/youth.png, enabled=true", 
+            "addons": "https://raw.githubusercontent.com/allonmymind/SS/Sunert/TaskConf/youth/qx_rewite.txt, tag=中青看点, update-interval=-1, opt-parser=false, enabled=true"
+        }, 
+        {
+            "config": "4 0 * * * https://raw.githubusercontent.com/allonmymind/SS/Sunert/Task/mydigit.js, tag=数码之家, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/mydigit.png, enabled=true", 
+            "addons": "https://raw.githubusercontent.com/allonmymind/SS/Sunert/TaskConf/digit_home/qx_rewite.txt, tag=数码之家, update-interval=-1, opt-parser=false, enabled=true"
+        }, 
+        {
+            "config": "*/10 */3 * * * https://raw.githubusercontent.com/allonmymind/SS/Sunert/Task/jukan.js, tag=聚看点, img-url=https://raw.githubusercontent.com/Sunert/Profiles/master/QuantumultX/Rules/Images/icon/jukan.png, enabled=true", 
+            "addons": "https://raw.githubusercontent.com/allonmymind/SS/Sunert/TaskConf/jukan/qx_rewite.txt, tag=聚看点, update-interval=-1, opt-parser=false, enabled=true"
+        }, 
+        {
+            "config": "*/30 */5 * * * https://raw.githubusercontent.com/allonmymind/SS/Sunert/Task/baidu_speed.js, tag=百度极速版, img-url=https://raw.githubusercontent.com/Sunert/Profiles/master/QuantumultX/Rules/Images/icon/baiduspeed.png, enabled=true",
+            "addons": "https://raw.githubusercontent.com/allonmymind/SS/Sunert/TaskConf/baidu/qx_rewite.txt, tag=百度极速, update-interval=-1, opt-parser=false, enabled=true"
+        }
+    ]
+}
