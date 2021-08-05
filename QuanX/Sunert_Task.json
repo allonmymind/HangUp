@@ -1,6 +1,6 @@
 {
     "name": "Sunert Task gallery", 
-    "description": "https://github.com/Sunert/Script", 
+    "description": "https://github.com/", 
     "task": [
         {
             "config": "0 0 7,22 * * * https://raw.githubusercontent.com/allonmymind/SS/Sunert/Task/dianshijia.js, tag=电视家, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/dianshijia.png, enabled=true", 
