@@ -2,7 +2,7 @@
 #Cookie获取成功后在重写里禁用掉本订阅
 #Cookie失效时在重写里启用本订阅
 
-hostname = me-api.jd.com, api.m.jd.com, draw.jdfcloud.com, jdjoy.jd.com, account.huami.com, www.xiaodouzhuan.cn, c.tieba.baidu.com, ms.jr.jd.com, wq.jd.com, m.jingxi.com
+hostname = me-api.jd.com, api.m.jd.com, draw.jdfcloud.com, jdjoy.jd.com, account.huami.com, www.xiaodouzhuan.cn, c.tieba.baidu.com, ms.jr.jd.com, wq.jd.com, m.jingxi.com, e.189.cn, mkt.21cn.com
 
 # 获取京东Cookie. 
 ^https:\/\/(api\.m|me-api)\.jd\.com\/(client\.action\?functionId=signBean|user_new\/info\/GetJDUserInfoUnion\?) url script-request-header https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
@@ -40,3 +40,8 @@ https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login url script-requ
 
 # 价格保护
 https:\/\/api\.m.jd.com\/api\?appid=siteppM&functionId=siteppM_priceskusPull url script-request-body https://raw.githubusercontent.com/ZCY01/daily_scripts/main/jd/jd_priceProtectRewrite.js
+
+#电信
+^https?:\/\/e\.189\.cn\/store\/user\/package_detail\.do url script-request-header https://raw.githubusercontent.com/allonmymind/HangUp/main/Else/telecomsky.js
+
+https:\/\/mkt\.21cn\.com\/mkt\/api\/user\/queryActivityInfo\.do\?activityId=\d+ url script-request-header https://raw.githubusercontent.com/allonmymind/HangUp/main/Else/telecomsky.js
