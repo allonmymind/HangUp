@@ -21,11 +21,11 @@ p
  
 w
 EOF
-fdisk /Arch-N1.img < /fdisk.cmd
+fdisk /media/wxedge_storage/Arch-N1.img < /fdisk.cmd
 rm /fdisk.cmd
 
 #Mount As Loop Device
-losetup -f -P --show /Arch-N1.img
+losetup -f -P --show /media/wxedge_storage/Arch-N1.img
 sleep 5
 
 #Mount And Format Partition
