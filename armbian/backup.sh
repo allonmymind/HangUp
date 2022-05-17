@@ -2,7 +2,7 @@
 
 #Create Image
 #这里可以基于自己的系统占用修改生成的img
-fallocate -l 2G /Arch-N1.img
+fallocate -l 6G /media/wxedge_storage/Arch-N1b.img
 
 #Resize Image
 cat > /fdisk.cmd <<-EOF
@@ -65,6 +65,6 @@ sync
 umount -R /img
 
 #可以对镜像进行压缩
-xz -z Arch-N1.img
+#xz -z Arch-N1b.img
 
 exit 0
