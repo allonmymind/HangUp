@@ -2,7 +2,7 @@
 
 #Create Image
 #这里可以基于自己的系统占用修改生成的img
-fallocate -l 6G /media/wxedge_storage/Arch-N1.img
+fallocate -l 3G /Arch-N1.img
 
 #Resize Image
 cat > /fdisk.cmd <<-EOF
@@ -21,11 +21,11 @@ p
  
 w
 EOF
-fdisk /media/wxedge_storage/Arch-N1.img < /fdisk.cmd
+fdisk /Arch-N1.img < /fdisk.cmd
 rm /fdisk.cmd
 
 #Mount As Loop Device
-losetup -f -P --show /media/wxedge_storage/Arch-N1.img
+losetup -f -P --show /Arch-N1.img
 sleep 5
 
 #Mount And Format Partition
