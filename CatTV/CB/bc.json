@@ -1,6 +1,6 @@
 
 {
-"spider":"https://ghproxy.com/https://github.com/allonmymind/HangUp/blob/main/CatTV/CB/0630.jar?raw=true",
+"spider":"https://ghproxy.com/https://github.com/allonmymind/HangUp/blob/main/CatTV/CB/0701apple.jar?raw=true",
 
 "lives":[{"group":"redirect","channels":[{"name":"live","urls":["proxy://do=live&type=txt&ext=aHR0cHM6Ly9naHByb3h5LmNvbS9odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vYWxsb25teW1pbmQvSGFuZ1VwL21haW4vQ2F0VFYvQ0IvdHYvYmMudHh0"]}]}],
 
