@@ -1,0 +1,17 @@
+version: '3'
+services:
+  clash:
+    image: dreamacro/clash
+    network_mode: "host"
+    container_name: clash
+    environment:
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./config.yaml:/root/.config/clash/config.yaml
+    ports:
+      - "7890:7890"
+      - "7891:7891"
+      # If you need external controller, you can export this port.
+      - "9090:9090"
+    restart: unless-stopped
+    # When your system is Linux, you can use `network_mode: "host"` directly.
