@@ -7,8 +7,8 @@ services:
     volumes:
       - ./user:/xuexi/user
     environment:
-      - AccessToken=1585109745:AAHiY5ec0LYvqdVJBTKw3BeD5J_OjGnMScM
-      - Secret=933878109
+      - AccessToken=85109745:AAHiY5ec0LYvqdVJBTKw3BeD5J_OjGnMScM
+      - Secret=3878109
       - Pushmode=5
       - CRONTIME=40 7,12,17,22 * * *
       - ZhuanXiang=True
