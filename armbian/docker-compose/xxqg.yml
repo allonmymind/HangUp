@@ -1,0 +1,19 @@
+version: '3.5'
+services:
+  xuexi:
+    image: techxuexi/techxuexi-arm64v8:dev86
+    container_name: xxqg
+    restart: unless-stopped
+    volumes:
+      - ./user:/xuexi/user
+    environment:
+      - AccessToken=1585109745:AAHiY5ec0LYvqdVJBTKw3BeD5J_OjGnMScM
+      - Secret=933878109
+      - Pushmode=5
+      - CRONTIME=40 7,12,17,22 * * *
+      - ZhuanXiang=True
+      - Scheme=https://techxuexi.js.org/jump/techxuexi-20211023.html?
+    build:
+      context: .
+      shm_size: '2gb'
+    shm_size: '2gb'
