@@ -15,10 +15,13 @@ services:
       - "9090:9090"
     restart: always
     # When your system is Linux, you can use `network_mode: "host"` directly.
-   yacd:
-    image: haishanh/yacd
+  yacd:
+    image: centralx/clash-dashboard
     container_name: yacd
     ports:
       - "80:80"
     restart: always
-
+networks:
+  default:
+    driver: bridge
+    name: clash_yacd
