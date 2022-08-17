@@ -15,7 +15,6 @@ services:
       - "9090:9090"
     restart: always
     # When your system is Linux, you can use `network_mode: "host"` directly.
-    
    yacd:
     image: haishanh/yacd
     container_name: yacd
