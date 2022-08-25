@@ -10,5 +10,5 @@
     // "api":"http://127.0.0.1:1993/vod?ali_token=3xx9cfxxxx509bxx",
     "searchable":1,
     "quickSearch":1,
-    "filterable":0
+    "filterable":0,
 }
