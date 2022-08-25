@@ -3,8 +3,9 @@
     "name":"T4测试",
     "type":4,
     // 参数sites可筛选站点，tag用,隔开，不加或sites=all为搜索所有支持的站点
-    "api":"http://127.0.0.1:1993/vod?sites=all",
+    //"api":"http://127.0.0.1:1993/vod?sites=all",
     // "api":"http://127.0.0.1:8080/vod?sites=czspp,yiso",
+    "api":"http://124.222.178.92:8080/vod?sites=all&ali_token=d753cd96dec240fbbb1b57b3a18c92cc"
     "searchable":1,
     "quickSearch":1,
     "filterable":0
