@@ -6,7 +6,7 @@
     // 参数ali_token提供阿里系的搜索播放功能（非必须）
     // 参数timeout提供聚合搜索限时返回结果功能，超时数据不再等待，默认5秒
     //"api":"http://10.116.195.1:8080/vod?sites=all&ali_token=d753cd96dec240fbbb1b57b3a18c92cc&timeout=5",
-    "api":"http://124.222.178.92:8080/vod?sites=all&ali_token=d753cd96dec240fbbb1b57b3a18c92cc&timeout=5",
+    "api":"http://124.222.178.92:8080/vod?sites=all&ali_token=d753cd96dec240fbbb1b57b3a18c92cc",
     // "api":"http://127.0.0.1:8080/vod",
     // "api":"http://127.0.0.1:8080/vod?sites=czspp,yiso",
     // "api":"http://127.0.0.1:8080/vod?ali_token=3xx9cfxxxx509bxx",
