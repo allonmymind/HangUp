@@ -1,31 +1,45 @@
 {
 
-"spider":"https://ghproxy.com/https://github.com/allonmymind/HangUp/blob/main/CatTV/config/custom_spider.jar?raw=true",
+	"spider": "https://ghproxy.com/https://github.com/allonmymind/HangUp/blob/main/CatTV/config/custom_spider.jar?raw=true",
 
 
-"lives":[{"group":"redirect","channels":[{"name":"live","urls":[
-"proxy://do=live&type=txt&ext=aHR0cHM6Ly9naHByb3h5LmNvbS9odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vYWxsb25teW1pbmQvSGFuZ1VwL21haW4vQ2F0VFYvQ0IvdHYvYmMudHh0"
-]}]}],
+	"lives": [{
+		"group": "redirect",
+		"channels": [{
+			"name": "live",
+			"urls": [
+				"proxy://do=live&type=txt&ext=aHR0cHM6Ly9naHByb3h5LmNvbS9odHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vYWxsb25teW1pbmQvSGFuZ1VwL21haW4vQ2F0VFYvQ0IvdHYvYmMudHh0"
+			]
+		}]
+	}],
 
-"sites":[
-        {
-            "key":"t4public",
-            "name":"T4公共",
-            "type":4,
-            "api":"https://t4.secan.icu/vod?sites=all&ali_token=d753cd96dec240fbbb1b57b3a18c92cc&timeout=10",
-            "searchable":1,
-            "quickSearch":1,
-            "filterable":0
-         },
-{"key":"csp_SP360","name":"💘360(SP)","type":3,"api":"csp_SP360","searchable":1,"quickSearch":1,"filterable":1},
-{
-  "key": "csp_Alist2",
-  "name": "Alist2(SP)",
-  "type": 3,
-  "api": "csp_Alist",
-  "searchable": 0,
-  "quickSearch": 0,
-  "filterable": 0,
-  "ext": "https://alist.youte.ml"
-}]
+	"sites": [{
+			"key": "t4public",
+			"name": "T4公共",
+			"type": 4,
+			"api": "https://t4.secan.icu/vod?sites=all&ali_token=d753cd96dec240fbbb1b57b3a18c92cc&timeout=10",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 0
+		},
+		{
+			"key": "csp_SP360",
+			"name": "💘360(SP)",
+			"type": 3,
+			"api": "csp_SP360",
+			"searchable": 1,
+			"quickSearch": 1,
+			"filterable": 1
+		},
+		{
+			"key": "csp_Alist2",
+			"name": "Alist2(SP)",
+			"type": 3,
+			"api": "csp_Alist",
+			"searchable": 0,
+			"quickSearch": 0,
+			"filterable": 0,
+			"ext": "https://alist.youte.ml"
+		}
+	]
 }
