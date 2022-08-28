@@ -16,7 +16,7 @@
             "key":"t4public",
             "name":"T4公共",
             "type":4,
-            "api":"https://t4.secan.icu/vod?sites=all&ali_token=xxxxxxxxx&timeout=10",
+            "api":"https://t4.secan.icu/vod?sites=all&ali_token=d753cd96dec240fbbb1b57b3a18c92cc&timeout=10",
             "searchable":1,
             "quickSearch":1,
             "filterable":0
