@@ -1,1 +1,34 @@
-{"key":"t4public","name":"T4公共","type":4,"api":"https://t4.secan.icu/vod?sites=all&ali_token=d753cd96dec240fbbb1b57b3a18c92cc&timeout=10","searchable":1,"quickSearch":1,"filterable":0},
+//{"key":"t4public","name":"T4公共","type":4,"api":"https://t4.secan.icu/vod?sites=all&ali_token=d753cd96dec240fbbb1b57b3a18c92cc&timeout=10","searchable":1,"quickSearch":1,"filterable":0},
+
+
+// 配置地址 --> clan://localhost/TVBox/全合集.json
+{
+
+"spider":"clan://TVBox/gg0826.jar",
+
+//直播
+"lives":[{"group":"redirect","channels":[{"name":"live","urls":[
+"proxy://do=live&type=txt&ext=aHR0cDovL2hvbWUuanVuZGllLnRvcDo4MS9DYXQvdHYvbGl2ZS50eHQ="
+]}]}],
+{
+    "sites":[
+        {
+            "key":"t4public",
+            "name":"T4公共",
+            "type":4,
+            "api":"https://t4.secan.icu/vod?sites=all&ali_token=xxxxxxxxx&timeout=10",
+            "searchable":1,
+            "quickSearch":1,
+            "filterable":0
+},
+{"key":"csp_SP360","name":"💘360(SP)","type":3,"api":"csp_SP360","searchable":1,"quickSearch":1,"filterable":1},
+{
+  "key": "csp_Alist2",
+  "name": "Alist2(SP)",
+  "type": 3,
+  "api": "csp_Alist",
+  "searchable": 0,
+  "quickSearch": 0,
+  "filterable": 0,
+  "ext": "https://alist.youte.ml"
+},
