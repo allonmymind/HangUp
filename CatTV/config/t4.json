@@ -1,7 +1,7 @@
 // 配置地址 --> clan://localhost/TVBox/全合集.json
 {
 
-"spider":"https://github.com/allonmymind/HangUp/blob/main/CatTV/config/custom_spider.jar?raw=true",
+"spider":"https://ghproxy.com/https://github.com/allonmymind/HangUp/blob/main/CatTV/config/custom_spider.jar?raw=true",
 
 //直播
 "lives":[{"group":"redirect","channels":[{"name":"live","urls":[
