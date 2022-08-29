@@ -2,7 +2,7 @@
 
 #Create Image
 #这里可以基于自己的系统占用修改生成的img
-fallocate -l 3G /Arch-N1.img
+fallocate -l 3G /Armbian-backupimage.img
 
 #Resize Image
 cat > /fdisk.cmd <<-EOF
@@ -21,11 +21,11 @@ p
  
 w
 EOF
-fdisk /Arch-N1.img < /fdisk.cmd
+fdisk /Armbian-backupimage.img < /fdisk.cmd
 rm /fdisk.cmd
 
 #Mount As Loop Device
-losetup -f -P --show /Arch-N1.img
+losetup -f -P --show /Armbian-backupimage.img
 sleep 5
 
 #Mount And Format Partition
@@ -65,6 +65,6 @@ sync
 umount -R /img
 
 #可以对镜像进行压缩
-#xz -z Arch-N1.img
+#xz -z Armbian-backupimage.img
 
 exit 0
