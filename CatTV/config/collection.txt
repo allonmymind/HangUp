@@ -892,9 +892,7 @@
 			"filterable": 0,
 			"ext": "http://home.jundie.top:81/catvod/TVBox/MaooXB2/红领巾.json"
 		},
-
-		##XPath系列
-		 {
+		{
 			"key": "csp_xpath_zxzj2",
 			"name": "在线之家(XPF)",
 			"type": 3,
@@ -1175,9 +1173,6 @@
 			"filterable": 0,
 			"ext": "http://home.jundie.top:81/Cat/MaooXP/zj883.json"
 		},
-
-		##M浏览器中APP影视规则支持(AppYsV2)
-		## 萝卜 / 白菜 / 木白 / 绿豆 
 		{
 			"key": "csp_appysv2_熊猫动漫",
 			"name": "熊猫动漫(萝卜)",
@@ -1227,8 +1222,7 @@
 			"quickSearch": 1,
 			"filterable": 1,
 			"ext": "http://ys.58g8.com/lvdou_api.php/v1.vod"
-		}, 
-		##神马
+		},
 		{
 			"key": "csp_appysv2_小南TV",
 			"name": "小南TV(神马)",
@@ -1278,10 +1272,7 @@
 			"quickSearch": 1,
 			"filterable": 1,
 			"ext": "http://phoebe.cf/api.php/iptv/vod/"
-		}, 
-		
-		##广大侠 资源网采集
-		##官方解析 
+		},
 		{
 			"key": "8090资源",
 			"name": "8090资源(官)",
@@ -1377,9 +1368,7 @@
 			"api": "https://www.cjzy.xyz:8888/api.php/provide/vod/",
 			"searchable": 1,
 			"quickSearch": 1
-		}, 
-
-		##切片资源
+		},
 		{
 			"key": "金鹰资源",
 			"name": "金鹰资源(切)",
@@ -1571,9 +1560,7 @@
 			"api": "http://api.nguonphim.tv/api.php/provide/vod/",
 			"searchable": 1,
 			"quickSearch": 1
-		}, 
-
-		##优质资源
+		},
 		{
 			"key": "U酷资源",
 			"name": "U酷资源(优)",
@@ -1637,9 +1624,7 @@
 			"api": "https://lehootv.com/api.php/provide/vod/",
 			"searchable": 1,
 			"quickSearch": 1
-		}, 
-		
-		##三方聚合
+		},
 		{
 			"key": "影图",
 			"name": "影图(聚)",
@@ -2146,4 +2131,4 @@
 		}
 	],
 	"ads": ["mimg.0c1q0l.cn", "www.googletagmanager.com", "www.google-analytics.com", "mc.usihnbcq.cn", "mg.g1mm3d.cn", "mscs.svaeuzh.cn", "cnzz.hhttm.top", "tp.vinuxhome.com", "cnzz.mmstat.com", "www.baihuillq.com", "s23.cnzz.com", "z3.cnzz.com", "c.cnzz.com", "stj.v1vo.top", "z12.cnzz.com", "img.mosflower.cn", "tips.gamevvip.com", "ehwe.yhdtns.com", "xdn.cqqc3.com", "www.jixunkyy.cn", "sp.chemacid.cn", "hm.baidu.com", "s9.cnzz.com", "z6.cnzz.com", "um.cavuc.com", "mav.mavuz.com", "wofwk.aoidf3.com", "z5.cnzz.com", "xc.hubeijieshikj.cn", "tj.tianwenhu.com", "xg.gars57.cn", "k.jinxiuzhilv.com", "cdn.bootcss.com", "ppl.xunzhuo123.com", "xomk.jiangjunmh.top", "img.xunzhuo123.com", "z1.cnzz.com", "s13.cnzz.com", "xg.huataisangao.cn", "z7.cnzz.com", "xg.huataisangao.cn", "z2.cnzz.com", "s96.cnzz.com", "q11.cnzz.com", "thy.dacedsfa.cn", "xg.whsbpw.cn", "s19.cnzz.com", "z8.cnzz.com", "s4.cnzz.com", "f5w.as12df.top", "ae01.alicdn.com", "www.92424.cn", "k.wudejia.com", "vivovip.mmszxc.top", "qiu.xixiqiu.com", "cdnjs.hnfenxun.com", "cms.qdwght.com"],
-	"wallpaper":"http://www.kf666888.cn/api/tvbox/img"
+	"wallpaper": "http://www.kf666888.cn/api/tvbox/img"
