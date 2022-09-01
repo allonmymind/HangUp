@@ -902,8 +902,8 @@
 			"ext": "http://home.jundie.top:81/catvod/TVBox/MaooXB2/红领巾.json"
 		},
 
-		##
-		XPath系列 {
+		##XPath系列
+		 {
 			"key": "csp_xpath_zxzj2",
 			"name": "在线之家(XPF)",
 			"type": 3,
@@ -1185,8 +1185,9 @@
 			"ext": "http://home.jundie.top:81/Cat/MaooXP/zj883.json"
 		},
 
-		##
-		M浏览器中APP影视规则支持(AppYsV2)# 萝卜 / 白菜 / 木白 / 绿豆 {
+		##M浏览器中APP影视规则支持(AppYsV2)
+		# 萝卜 / 白菜 / 木白 / 绿豆 
+		{
 			"key": "csp_appysv2_熊猫动漫",
 			"name": "熊猫动漫(萝卜)",
 			"type": 3,
@@ -1235,8 +1236,9 @@
 			"quickSearch": 1,
 			"filterable": 1,
 			"ext": "http://ys.58g8.com/lvdou_api.php/v1.vod"
-		}, ##
-		神马 {
+		}, 
+		##神马
+		{
 			"key": "csp_appysv2_小南TV",
 			"name": "小南TV(神马)",
 			"type": 3,
@@ -1285,11 +1287,14 @@
 			"quickSearch": 1,
 			"filterable": 1,
 			"ext": "http://phoebe.cf/api.php/iptv/vod/"
-		}, #
+		}, 
+		
 
 
-		##
-		广大侠 资源网采集# 官方解析 {
+		
+		##广大侠 资源网采集
+		# 官方解析 
+		{
 			"key": "8090资源",
 			"name": "8090资源(官)",
 			"type": 1,
@@ -1384,8 +1389,9 @@
 			"api": "https://www.cjzy.xyz:8888/api.php/provide/vod/",
 			"searchable": 1,
 			"quickSearch": 1
-		}, ##
-		切片资源 {
+		}, 
+		##切片资源
+		{
 			"key": "金鹰资源",
 			"name": "金鹰资源(切)",
 			"type": 1,
@@ -1576,8 +1582,10 @@
 			"api": "http://api.nguonphim.tv/api.php/provide/vod/",
 			"searchable": 1,
 			"quickSearch": 1
-		}, ##
-		优质资源 {
+		}, 
+
+		##优质资源
+		{
 			"key": "U酷资源",
 			"name": "U酷资源(优)",
 			"type": 1,
@@ -1640,8 +1648,9 @@
 			"api": "https://lehootv.com/api.php/provide/vod/",
 			"searchable": 1,
 			"quickSearch": 1
-		}, ##
-		三方聚合 {
+		}, 
+		##三方聚合
+		{
 			"key": "影图",
 			"name": "影图(聚)",
 			"type": 1,
