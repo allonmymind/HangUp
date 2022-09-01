@@ -38,6 +38,15 @@
       "quickSearch": 1,
       "filterable": 1
     },
+    { 
+       "key": "t4public",
+       "name":"T4公共",
+       "type": 4,
+       "api":"https://t4.secan.icu/vod?sites=all&ali_token=4acb3ad2f2254ba1b566279f7cd98ba3&timeout=10", 
+       "searchable": 1,
+       "quickSearch": 1,
+       "filterable": 0
+    },
     {
       "key": "csp_Bttoo",
       "name": "两个BT",
@@ -303,15 +312,6 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "4acb3ad2f2254ba1b566279f7cd98ba3"
-    },
-    { 
-       "key": "t4public",
-       "name":"T4公共",
-       "type": 4,
-       "api":"https://t4.secan.icu/vod?sites=all&ali_token=4acb3ad2f2254ba1b566279f7cd98ba3&timeout=10", 
-       "searchable": 1,
-       "quickSearch": 1,
-       "filterable": 0
     },
     {
       "key": "诺讯资源",
