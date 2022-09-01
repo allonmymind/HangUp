@@ -8,24 +8,7 @@
 		}]
 	}],
 
-	"sites": [{
-			"key": "T4",
-			"name": "T4爬虫",
-			"type": 4,
-			"api": "https://service-59u7dsoa-1308372858.gz.apigw.tencentcs.com/release/vod?ali_token=自己的token&timeout=10",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 0
-		},
-		{
-			"key": "t4public",
-			"name": "T4公共",
-			"type": 4,
-			"api": "https://t4.secan.icu/vod?sites=all&ali_token=d753cd96dec240fbbb1b57b3a18c92cc&timeout=10",
-			"searchable": 1,
-			"quickSearch": 1,
-			"filterable": 0
-		},
+	"sites": [ 
 		{
 			"key": "csp_Kunyu77",
 			"name": "👒七七(SP)",
