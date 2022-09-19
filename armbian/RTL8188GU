@@ -1,0 +1,96 @@
+sudo apt install -y bc build-essential git
+
+sudo reboot
+
+Get source code
+
+git clone https://github.com/wandercn/RTL8188GU.git
+cd RTL8188GU/8188gu-1.0.1
+
+sudo make
+
+sudo make install
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    1  apt update && apt upgrade 
+    2  date
+    3  ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && echo "Asia/Shanghai" > /etc/timezone
+    4  apt update && apt upgrade -y
+    5  cd /usr/
+    6  dpkg -i linux-headers-current-arm-64_20.11_arm64.deb 
+    7  apt-get install binutils-arm-none-eabi gcc-arm-none-eabi
+    8  git clone https://github.com/tennekey/rtl8812au.git
+    9  git clone https://ghproxy.com/https://github.com/tennekey/rtl8812au.git
+   10  cd arm-rtl8812au/
+   11  l
+   12  ls
+   13  cd rtl8812au/
+   14  make ARCH=arm64
+   15  apt purge linux-headers-current-arm-64 
+   16  cd ..
+   17  dpkg -i linux-headers-current-arm-64_20.10_arm64.deb 
+   18  cd rtl8812au/
+   19  make ARCH=arm64
+   20  make
+   21  sudo apt-get install build.essential git
+   22  cd ..
+   23  rm -rf rtl8812au/
+   24  git clone https://github.com/kelvinandrian/RTL8189FS_Armbian-5.1.0
+   25  cd RTL8189FS_Armbian-5.1.0
+   26  dpkg -i rtl8189fs.deb
+   27  cd ..
+   28  git clone https://github.com/fixsmo/arm-rtl8812au.git wlan-utc
+   29  git clone https://ghproxy.com/https://github.com/fixsmo/arm-rtl8812au.git wlan-utc
+   30  cd wlan-utc
+   31  make
+   32  cd ..
+   33  ls
+   34  rm -rf RTL8189FS_Armbian-5.1.0/ wlan-utc/
+   35  ls
+   36  git clone  https://ghproxy.com/https://github.com/RaoChangying/8188gu-rao.git
+   37  cd 8188gu-rao/
+   38  make all
+   39  make ARCH=arm64
+   40  make ARCH=arm
+   41  make
+   42  cd ..
+   43  rm 8188gu-rao/
+   44  rm -rf 8188gu-rao/
+   45  sudo apt install -y  bc build-essential dkms git
+   46  mkdir ~/build
+   47  cd build
+   48  git clone https://github.com/McMCCRU/rtl8188gu
+   49  git clone https://github.com/morrownr/8821cu
+   50  git clone https://ghproxy.com/https://github.com/morrownr/8821cu
+   51  rm -rf 8821cu/
+   52  git clone https://ghproxy.com/https://github.com/morrownr/8821cu
+   53  git clone https://github.com/wandercn/RTL8188GU.git
+   54  git clone https://ghproxy.com/https://github.com/wandercn/RTL8188GU.git
+   55  cd RTL8188GU/8188gu-1.0.1/
+   56  make ARCH=arm64
+   57  lsusb
+   58  nmtui
+   59  iwconfig 
+   60  make install
+   61  iwconfig 
+   62  lsusb
+   63  apt install eject -y
+   64  eject /dev/cdrom 
+   65  iwconfig 
+   66  nmtui
+   67  iwconfig 
+   68  ifconfig 
+   69  nmtui
+   70  sync
+   71  history 
