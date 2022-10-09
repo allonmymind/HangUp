@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+    alist:
+      restart: always 
+      volumes: 
+      - '/etc/alist/data:/opt/alist/data' 
+      - '/media/alist:/opt/alist/share' 
+      ports: 
+      - '5244:5244' 
+      container_name: alist
+      image: 'xhofe/alist:latest'
