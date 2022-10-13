@@ -1,13 +1,15 @@
 version: '3.3'
 services:
-    drpy:
-            image: hjdhnx/drpy
-            container_name: drpy
-            restart: always
-            environment:
-                - TZ=Asia/Shanghai
-            ports:
-                - 5705:5705
-                - 9001:9001
-            volumes:
-                - ./:/root/sd/pywork/dr_py
+   drpy:
+        image: hjdhnx/drpy:amd64-v3.9.0
+        restart: always
+        container_name: drpy
+        environment:
+            - TZ=Asia/Shanghai
+        stdin_open: true
+        privileged: true
+        ports:
+            - '5705:5705'
+            - '9001:9001'
+        volumes:
+            - './dr_py:/root/sd/pywork/dr_py'
