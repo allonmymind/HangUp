@@ -1,7 +1,7 @@
 version: '3.3'
 services:
    drpy:
-        image: hjdhnx/drpy:amd64-v3.9.0
+        image: hjdhnx/drpy:arm64-v3.9.0
         restart: always
         container_name: drpy
         environment:
