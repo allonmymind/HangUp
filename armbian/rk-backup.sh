@@ -1,7 +1,8 @@
 #!/bin/bash
 
 #Create Image
-#这里可以基于自己的系统占用修改生成的imgfallocate -l 4G /Armbian-backupimage.img
+#这里可以基于自己的系统占用修改生成的img
+fallocate -l 4G /media/Armbian-backupimage.img
 
 #Resize Image
 cat > /fdisk.cmd <<-EOF
@@ -20,24 +21,24 @@ p
  
 w
 EOF
-fdisk /Armbian-backupimage.img < /fdisk.cmd
+fdisk /media/Armbian-backupimage.img < /fdisk.cmd
 rm /fdisk.cmd
 
-losetup -f -P --show /Armbian-backupimage.img
+losetup -f -P --show /media/Armbian-backupimage.img
 sleep 5
 
 #Mount And Format Partition
 #mkfs.vfat -n "BOOT" /dev/loop0p1
 mke2fs -F -q -t ext4 -L ROOTFS -m 0 /dev/loop0p2
-mkdir /img
-mount /dev/loop0p2 /img
-mkdir /img/boot
-#mount /dev/loop0p1 /img/boot
+mkdir /media/img
+mount /dev/loop0p2 /media/img
+mkdir /media/img/boot
+#mount /dev/loop0p1 /media/img/boot
 
 #Backup
 cd /
-DIR_INSTALL=/img
-cp -r /boot/* /img/boot/
+DIR_INSTALL=/media/img
+cp -r /boot/* /media/img/boot/
 mkdir -p $DIR_INSTALL/dev
 mkdir -p $DIR_INSTALL/media
 mkdir -p $DIR_INSTALL/mnt
@@ -61,7 +62,7 @@ tar -cf - var | (cd $DIR_INSTALL; tar -xpf -)
 
 sync
 
-umount -R /img
+umount -R /media/img
 
 #可以对镜像进行压缩
 #xz -z Armbian-backupimage.img
