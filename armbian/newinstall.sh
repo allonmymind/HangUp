@@ -62,4 +62,26 @@ sudo systemctl restart docker
 echo "docker镜像加速设置成功！！！"
 
 
-#5
+#5创建目录并下载容器配置文件
+mkdir /root/clash && cd /root/clash && wget -O docker-compose.yml https://ghproxy.com/https://raw.githubusercontent.com/allonmymind/HangUp/main/armbian/docker-compose/clash.yml
+
+mkdir /root/wxedge && cd /root/wxedge && wget -O docker-compose.yml https://ghproxy.com/https://raw.githubusercontent.com/allonmymind/HangUp/main/armbian/docker-compose/wxedge.yml
+
+mkdir /root/xxqg && cd /root/xxqg && wget -O docker-compose.yml https://ghproxy.com/https://raw.githubusercontent.com/allonmymind/HangUp/main/armbian/docker-compose/xxqg.yml
+
+mkdir /root/drpy && cd /root/drpy && wget -O docker-compose.yml https://ghproxy.com/https://raw.githubusercontent.com/allonmymind/HangUp/main/armbian/docker-compose/drpy.yml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
