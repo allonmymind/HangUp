@@ -30,7 +30,7 @@ echo "已修改时区为CST东八区！！！"
 
 # 2.换源为国内清华源****$1
 
-sudo sed -i 's/ports.ubuntu.com/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list
+sudo sed -i 's/ports.$1.com/mirrors.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list
 
 echo "已修改为国内清华源！！！"
 
@@ -51,7 +51,7 @@ curl -sSL https://get.daocloud.io/docker | sh && docker --version
 #echo "显示docker版本号代表安装成功！！！"
 echo "docker安装成功！！！"
 
-wget https://ghproxy.com/https://github.com/docker/compose/releases/download/v2.11.2/docker-compose-linux-aarch64 -O /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose && docker-compose --version
+wget https://ghproxy.com/https://github.com/docker/compose/releases/download/v2.11.2/docker-compose-linux-$2 -O /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose && docker-compose --version
 #echo "显示docker版本号代表安装成功！！！"
 echo "docker-compose安装成功！！！"
 
