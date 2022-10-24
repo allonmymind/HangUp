@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+    ddnsto:
+        container_name: ddnsto
+        restart: always
+        network_mode: host
+        environment:
+            - TOKEN=xxx
+            - DEVICE_IDX=0
+            - PUID=0
+            - PGID=0
+        volumes:
+            - '/etc/localtime:/etc/localtime:ro'
+        image: 'linkease/ddnsto:3.0.0
