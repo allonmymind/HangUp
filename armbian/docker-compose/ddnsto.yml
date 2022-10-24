@@ -5,7 +5,7 @@ services:
         restart: always
         network_mode: host
         environment:
-            - TOKEN=xxx
+            - TOKEN=15a9cc19-8f54-4bfc-a73a-d4a706be37e8
             - DEVICE_IDX=0
             - PUID=0
             - PGID=0
