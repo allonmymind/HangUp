@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+   auto-drpy:
+        image: esme518/docker-drpy
+        restart: always
+        container_name: drpy
+        environment:
+            - TZ=Asia/Shanghai
+            - INET_USERNAME=user
+            - INET_PASSWORD=123
+            - AUTOUPDATE=1
+        stdin_open: true
+        privileged: true
+        ports:
+            - '5705:5705'
+            - '9001:9001'
+        volumes:
+            - './dr_py:/root/sd/pywork/dr_py'
