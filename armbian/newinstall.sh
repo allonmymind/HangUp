@@ -71,7 +71,7 @@ mkdir /root/clash && cd /root/clash && wget -O docker-compose.yml https://ghprox
 
 mkdir /root/wxedge && cd /root/wxedge && wget -O docker-compose.yml https://ghproxy.com/https://raw.githubusercontent.com/allonmymind/HangUp/main/armbian/docker-compose/wxedge.yml
 
-mkdir /root/xxqg && cd /root/xxqg && wget -O docker-compose.yml https://ghproxy.com/https://raw.githubusercontent.com/allonmymind/HangUp/main/armbian/docker-compose/xxqg.yml
+mkdir /root/xxqg && cd /root/xxqg && wget -O docker-compose.yml https://ghproxy.com/https://raw.githubusercontent.com/allonmymind/HangUp/main/armbian/docker-compose/study.yml
 
 mkdir /root/drpy && cd /root/drpy && wget -O docker-compose.yml https://ghproxy.com/https://raw.githubusercontent.com/allonmymind/HangUp/main/armbian/docker-compose/autodrpy.yml
 
