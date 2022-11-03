@@ -1,6 +1,6 @@
 #!/bin/bash
-#$1=ubuntu,debian...
-#$2=armv7,armv8,aarch64,arm64...
+
+#$1=armv7,armv8,aarch64,arm64...
 :<<!
 echo '输入 1 到 4 之间的数字:'
 echo '你输入的数字为:'
@@ -55,7 +55,7 @@ curl -sSL https://get.daocloud.io/docker | sh && docker --version
 #echo "显示docker版本号代表安装成功！！！"
 echo "##############################docker安装成功！！！######################################"
 
-wget https://ghproxy.com/https://github.com/docker/compose/releases/download/v2.11.2/docker-compose-linux-$2 -O /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose && docker-compose --version
+wget https://ghproxy.com/https://github.com/docker/compose/releases/download/v2.11.2/docker-compose-linux-$1 -O /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose && docker-compose --version
 #echo "显示docker版本号代表安装成功！！！"
 echo "#############################docker-compose安装成功！！！################################"
 
