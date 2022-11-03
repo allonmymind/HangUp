@@ -19,6 +19,11 @@ case $aNum in
 esac
 !
 
+echo "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
+# 获取当前系统发行版本
+ver=$(lsb_release -d -s)
+echo "####################当前运行的系统为${ver%% *}！！！######################"
+
 
 echo "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
 echo "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^1.正在修改时区为东八区^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
@@ -32,7 +37,7 @@ echo "####################已修改时区为CST东八区！！！###############
 echo "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
 echo "^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^2.换源为国内清华源^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^"
 
-sudo sed -i "s/ports.$1.com/mirrors.tuna.tsinghua.edu.cn\/$1-ports/g" /etc/apt/sources.list
+sudo sed -i "s/ports.${ver%% *}.com/mirrors.tuna.tsinghua.edu.cn\/${ver%% *}-ports/g" /etc/apt/sources.list
 
 echo "####################已修改为国内清华源！！!##############################"
 
@@ -68,7 +73,7 @@ mkdir /root/wxedge && cd /root/wxedge && wget -O docker-compose.yml https://ghpr
 
 mkdir /root/xxqg && cd /root/xxqg && wget -O docker-compose.yml https://ghproxy.com/https://raw.githubusercontent.com/allonmymind/HangUp/main/armbian/docker-compose/xxqg.yml
 
-mkdir /root/drpy && cd /root/drpy && wget -O docker-compose.yml https://ghproxy.com/https://raw.githubusercontent.com/allonmymind/HangUp/main/armbian/docker-compose/drpy.yml
+mkdir /root/drpy && cd /root/drpy && wget -O docker-compose.yml https://ghproxy.com/https://raw.githubusercontent.com/allonmymind/HangUp/main/armbian/docker-compose/autodrpy.yml
 
 
 
