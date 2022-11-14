@@ -1,0 +1,13 @@
+version: "3"
+networks:
+          macnet:
+                  external: true            ###宣告网络
+services: 
+  openwrt:
+          image: unifreq/openwrt-aarch64    ###镜像名称
+          container_name: openwrt           ###容器名称
+          networks:
+                  - macnet                  ###网络名称
+          privileged: true                  ###特权模式
+          command: '/sbin/init'             ###执行命令
+          restart: always                   ###容器退出时始终重启
