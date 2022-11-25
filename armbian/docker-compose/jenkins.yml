@@ -12,4 +12,5 @@ services:
       
       
       
-# docker cp jenkins.war jenkins:/usr/local/tomcat/webapps/jenkins.war
+#wget http://mirrors.jenkins.io/war-stable/latest/jenkins.war
+#docker cp jenkins.war jenkins:/usr/local/tomcat/webapps/jenkins.war
