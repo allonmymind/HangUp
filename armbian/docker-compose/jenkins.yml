@@ -1,0 +1,15 @@
+## jenkins
+version: '3.3'
+services:
+    tomcat:
+      container_name: jenkins
+      ports:
+            - '8080:8080'
+      volumes:
+            - ./tomcat/webapps:/usr/local/tomcat/webapps
+
+      image: arm64v8/tomcat
+      
+      
+      
+# docker cp jenkins.war jenkins:/usr/local/tomcat/webapps/jenkins.war
