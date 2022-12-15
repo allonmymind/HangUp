@@ -75,7 +75,7 @@ mkdir /root/wxedge && cd /root/wxedge && wget -O docker-compose.yml https://ghpr
 
 mkdir /root/xxqg && cd /root/xxqg && wget -O docker-compose.yml https://ghproxy.com/https://raw.githubusercontent.com/allonmymind/HangUp/main/armbian/docker-compose/study.yml
 
-mkdir /root/drpy && cd /root/drpy && wget -O docker-compose.yml https://ghproxy.com/https://raw.githubusercontent.com/allonmymind/HangUp/main/armbian/docker-compose/autodrpy.yml
+mkdir /root/drpy && cd /root/drpy && wget -O docker-compose.yml https://ghproxy.com/https://raw.githubusercontent.com/allonmymind/HangUp/main/armbian/docker-compose/autodrpy.yml && git clone https://gitcode.net/qq_32394351/dr_py.git
 
 mkdir /root/openwrt && cd /root/openwrt && wget https://ghproxy.com/https://raw.githubusercontent.com/STIVW/stiv/master/Docker/openwrt/docker-compose.yml
 
