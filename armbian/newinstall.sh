@@ -77,12 +77,9 @@ mkdir /root/xxqg && cd /root/xxqg && wget -O docker-compose.yml https://gh.hangu
 
 mkdir /root/drpy && cd /root/drpy && wget -O docker-compose.yml https://gh.hangup.ml/allonmymind/HangUp/main/armbian/docker-compose/autodrpy.yml && git clone https://gitcode.net/qq_32394351/dr_py.git
 
-mkdir /root/openwrt && cd /root/openwrt && wget https://gh.hangup.ml/STIVW/stiv/master/Docker/openwrt/docker-compose.yml
+mkdir /root/openwrt && cd /root/openwrt && wget -O docker-compose.yml https://gh.hangup.ml/STIVW/stiv/raw/master/Docker/openwrt/docker-compose.yml
 
-mkdir /root/ddnsgo && cd /root/ddnsgo && wget https://gh.hangup.ml/allonmymind/HangUp/raw/main/armbian/docker-compose/ddnsgo.yml                
-
-
-
+mkdir /root/ddnsgo && cd /root/ddnsgo && wget -O docker-compose.yml https://gh.hangup.ml/allonmymind/HangUp/raw/main/armbian/docker-compose/ddnsgo.yml                
 
 
 
