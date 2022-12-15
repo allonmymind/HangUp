@@ -79,7 +79,7 @@ mkdir /root/drpy && cd /root/drpy && wget -O docker-compose.yml https://ghproxy.
 
 mkdir /root/openwrt && cd /root/openwrt && wget https://ghproxy.com/https://raw.githubusercontent.com/STIVW/stiv/master/Docker/openwrt/docker-compose.yml
 
-
+mkdir /root/ddnsgo && cd /root/ddnsgo && wget https://ghproxy.com/https://raw.githubusercontent.com/STIVW/stiv/master/Docker/openwrt/docker-compose.yml
 
 
 
