@@ -69,19 +69,17 @@ echo "###############################docker镜像加速设置成功！！！####
 
 
 # 5.创建目录并下载容器配置文件
-mkdir /root/clash && cd /root/clash && wget -O docker-compose.yml https://ghproxy.com/https://raw.githubusercontent.com/allonmymind/HangUp/main/armbian/docker-compose/clash.yml
+mkdir /root/clash && cd /root/clash && wget -O docker-compose.yml https://gh.hangup.ml/allonmymind/HangUp/main/armbian/docker-compose/clash.yml
 
-mkdir /root/wxedge && cd /root/wxedge && wget -O docker-compose.yml https://ghproxy.com/https://raw.githubusercontent.com/allonmymind/HangUp/main/armbian/docker-compose/wxedge.yml
+mkdir /root/wxedge && cd /root/wxedge && wget -O docker-compose.yml https://gh.hangup.ml/allonmymind/HangUp/main/armbian/docker-compose/wxedge.yml
 
-mkdir /root/xxqg && cd /root/xxqg && wget -O docker-compose.yml https://ghproxy.com/https://raw.githubusercontent.com/allonmymind/HangUp/main/armbian/docker-compose/study.yml
+mkdir /root/xxqg && cd /root/xxqg && wget -O docker-compose.yml https://gh.hangup.ml/allonmymind/HangUp/main/armbian/docker-compose/study.yml
 
-mkdir /root/drpy && cd /root/drpy && wget -O docker-compose.yml https://ghproxy.com/https://raw.githubusercontent.com/allonmymind/HangUp/main/armbian/docker-compose/autodrpy.yml && git clone https://gitcode.net/qq_32394351/dr_py.git
+mkdir /root/drpy && cd /root/drpy && wget -O docker-compose.yml https://gh.hangup.ml/allonmymind/HangUp/main/armbian/docker-compose/autodrpy.yml && git clone https://gitcode.net/qq_32394351/dr_py.git
 
-mkdir /root/openwrt && cd /root/openwrt && wget https://ghproxy.com/https://raw.githubusercontent.com/STIVW/stiv/master/Docker/openwrt/docker-compose.yml
+mkdir /root/openwrt && cd /root/openwrt && wget https://gh.hangup.ml/STIVW/stiv/master/Docker/openwrt/docker-compose.yml
 
-mkdir /root/ddnsgo && cd /root/ddnsgo && wget https://ghproxy.com/https://raw.githubusercontent.com/STIVW/stiv/master/Docker/openwrt/docker-compose.yml
-
-
+mkdir /root/ddnsgo && cd /root/ddnsgo && wget https://gh.hangup.ml/allonmymind/HangUp/raw/main/armbian/docker-compose/ddnsgo.yml                
 
 
 
