@@ -1,0 +1,23 @@
+version: '3.3'
+services:
+    qinglong:
+        volumes:
+            - '/root/ql/config:/ql/config'
+            - '/root/ql/log:/ql/log'
+            - '/root/ql/db:/ql/db'
+            - '/root/ql/scripts:/ql/scripts'
+            - '/root/ql/jbot:/ql/jbot'
+            - '/root/ql/repo:/ql/repo'
+            - '/root/ql/ninja:/ql/ninja'
+            - '/root/ql/raw:/ql/raw'
+        ports:
+            - '5960:5700'
+            - '5701:5701'
+        environment:
+            - ENABLE_HANGUP=true
+            - ENABLE_WEB_PANEL=true
+        container_name: ql
+        hostname: ql
+        privileged: true
+        restart: always
+        image: 'whyour/qinglong:2.10.13'
