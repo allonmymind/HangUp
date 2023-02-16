@@ -2,7 +2,7 @@
 
 #Create Image
 #这里可以基于自己的系统占用修改生成的img
-fallocate -l 4G /Armbian-backupimage.img
+fallocate -l 10G /Armbian-backupimage.img
 
 #Resize Image
 cat > /fdisk.cmd <<-EOF
@@ -11,7 +11,7 @@ n
 p
 1
  
-+512MB
++16MB
 t
 c
 n
@@ -29,12 +29,12 @@ losetup -f -P --show /Armbian-backupimage.img
 sleep 5
 
 #Mount And Format Partition
-mkfs.vfat -n "BOOT" /dev/loop0p1
+#mkfs.vfat -n "null" /dev/loop0p1
 mke2fs -F -q -t ext4 -L ROOTFS -m 0 /dev/loop0p2
 mkdir /img
 mount /dev/loop0p2 /img
 mkdir /img/boot
-mount /dev/loop0p1 /img/boot
+#mount /dev/loop0p1 /img/boot
 
 #Backup
 cd /
@@ -53,7 +53,6 @@ tar -cf - boot | (cd $DIR_INSTALL; tar -xpf -)
 tar -cf - etc | (cd $DIR_INSTALL; tar -xpf -)
 tar -cf - home | (cd $DIR_INSTALL; tar -xpf -)
 tar -cf - lib | (cd $DIR_INSTALL; tar -xpf -)
-tar -cf - lib64 | (cd $DIR_INSTALL; tar -xpf -)
 tar -cf - opt | (cd $DIR_INSTALL; tar -xpf -)
 tar -cf - root | (cd $DIR_INSTALL; tar -xpf -)
 tar -cf - sbin | (cd $DIR_INSTALL; tar -xpf -)
