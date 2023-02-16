@@ -2,7 +2,7 @@
 
 #Create Image
 #这里可以基于自己的系统占用修改生成的img
-fallocate -l 4G /media/Armbian-backupimage.img
+fallocate -l 3.3G /media/Armbian-backupimage.img
 
 #Resize Image
 cat > /fdisk.cmd <<-EOF
