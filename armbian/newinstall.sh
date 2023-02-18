@@ -57,7 +57,7 @@ curl -sSL https://get.daocloud.io/docker | sh && docker --version
 #echo "显示docker版本号代表安装成功！！！"
 echo "##############################docker安装成功！！！######################################"
 
-wget https://ghproxy.com/https://github.com/docker/compose/releases/download/v2.11.2/docker-compose-`uname -s`-`uname -m` -O /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose && docker-compose --version
+wget https://ghproxy.com/https://github.com/docker/compose/releases/download/v2.16.0/docker-compose-`uname -s`-`uname -m` -O /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose && docker-compose --version
 #echo "显示docker版本号代表安装成功！！！"
 echo "#############################docker-compose安装成功！！！################################"
 
@@ -72,8 +72,6 @@ echo "###############################docker镜像加速设置成功！！！####
 mkdir /root/clash && cd /root/clash && wget -O docker-compose.yml https://gh.hangup.ml/allonmymind/HangUp/main/armbian/docker-compose/clash.yml
 
 mkdir /root/wxedge && cd /root/wxedge && wget -O docker-compose.yml https://gh.hangup.ml/allonmymind/HangUp/main/armbian/docker-compose/wxedge.yml
-
-mkdir /root/xxqg && cd /root/xxqg && wget -O docker-compose.yml https://gh.hangup.ml/allonmymind/HangUp/main/armbian/docker-compose/study.yml
 
 mkdir /root/drpy && cd /root/drpy && wget -O docker-compose.yml https://gh.hangup.ml/allonmymind/HangUp/main/armbian/docker-compose/autodrpy.yml && git clone https://gitcode.net/qq_32394351/dr_py.git
 
