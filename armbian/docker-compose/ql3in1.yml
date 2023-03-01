@@ -1,0 +1,55 @@
+version: '3.3'
+services:
+    qinglong:
+        volumes:
+            - './config:/ql/config'
+            - './log:/ql/log'
+            - './db:/ql/db'
+            - './scripts:/ql/scripts'
+            - './jbot:/ql/jbot'
+            - './repo:/ql/repo'
+            - './ninja:/ql/ninja'
+            - './raw:/ql/raw'
+        ports:
+            - '5700:5700'
+            - '5701:5701'
+        environment:
+            - ENABLE_HANGUP=true
+            - ENABLE_WEB_PANEL=true
+        container_name: ql
+        hostname: ql
+        privileged: true
+        restart: always
+        image: 'whyour/qinglong:2.11'
+
+    go-cqhttp:
+        image: mzzsfy/go-cqhttp:latest
+        container_name: go-cqhttp
+        volumes:
+            - ./qqbot/data:/data
+        restart: always
+        environment:
+    #       - token=$Yourtoken #替换为自己生成的token
+            - ws_url='ws://sillygirl:8080/qq/receive'
+            - TZ=Asia/Shanghai
+        networks:
+           - sillygirl
+        depends_on:
+            - sillygirl
+
+    sillygirl:
+        image: mzzsfy/sillygirl:latest
+        container_name: sillygirl   
+        volumes:
+            - ./sillyGirl:/etc/sillyGirl
+        ports:
+            - 8080:8080
+        restart: always
+        environment:
+    #       - set__qq__token=$Yourtoken #替换为自己生成的token
+            - TZ=Asia/Shanghai
+        networks:
+           - sillygirl
+
+networks:
+   sillygirl:
