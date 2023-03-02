@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+    auto_spy:
+        restart: always
+        container_name: auto_spy
+        logging:
+            options: 
+              max-size: "100m"
+              max-file: "3"
+        volumes:
+            - './auto_spy_data/autospy:/autospy'
+        hostname: auto_spy
+        image: 'xieshang1111/auto_spy:arm'
