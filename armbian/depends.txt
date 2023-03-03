@@ -1,0 +1,42 @@
+## nodejs:
+fs	
+js-base64	
+jieba	
+typescript	
+form-data	
+jsdom	
+jsdom -g	
+ds		
+tslib	
+@types/node	
+crypto-js	
+require	
+request	
+tough-cookie	
+tunnel	
+ts-md5	
+node-rsa	
+axios	
+cheerio	
+png-js	
+date-fns	
+ws@7.4.3	
+global-agent	
+prettytable	
+dotenv	
+json5	
+
+
+## python 
+aiohttp	
+ping3	
+jd_sign	
+canvas	
+requests	
+jieba
+
+
+## linux
+lxml	
+bizMsg	
+bizCode
