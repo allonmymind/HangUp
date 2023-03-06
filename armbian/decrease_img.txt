@@ -1,0 +1,144 @@
+root@rk3318-box:/mnt# sudo modprobe loop
+root@rk3318-box:/mnt# sudo losetup -f
+/dev/loop0
+root@rk3318-box:/mnt# sudo losetup /dev/loop0 eaidk310.img 
+root@rk3318-box:/mnt# sudo fdisk -l /dev/loop0
+Disk /dev/loop0: 58.24 GiB, 62534975488 bytes, 122138624 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xbb6cf9c7
+
+Device       Boot Start       End   Sectors  Size Id Type
+/dev/loop0p1      32768 120913919 120881152 57.6G 83 Linux
+root@rk3318-box:/mnt# sudo partprobe /dev/loop0
+root@rk3318-box:/mnt# sudo e2fsck -f /dev/loop0p1
+e2fsck 1.46.5 (30-Dec-2021)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+/dev/loop0p1: 270209/3747744 files (0.2% non-contiguous), 1883590/15110144 blocks
+root@rk3318-box:/mnt# sudo resize2fs -M /dev/loop0p1
+resize2fs 1.46.5 (30-Dec-2021)
+Resizing the filesystem on /dev/loop0p1 to 2156437 (4k) blocks.
+The filesystem on /dev/loop0p1 is now 2156437 (4k) blocks long.
+
+root@rk3318-box:/mnt# sudo resize2fs -M /dev/loop0p1
+resize2fs 1.46.5 (30-Dec-2021)
+Resizing the filesystem on /dev/loop0p1 to 2130565 (4k) blocks.
+The filesystem on /dev/loop0p1 is now 2130565 (4k) blocks long.
+
+root@rk3318-box:/mnt# sudo resize2fs -M /dev/loop0p1
+resize2fs 1.46.5 (30-Dec-2021)
+Resizing the filesystem on /dev/loop0p1 to 2130514 (4k) blocks.
+The filesystem on /dev/loop0p1 is now 2130514 (4k) blocks long.
+
+root@rk3318-box:/mnt# sudo resize2fs -M /dev/loop0p1
+resize2fs 1.46.5 (30-Dec-2021)
+The filesystem is already 2130514 (4k) blocks long.  Nothing to do!
+
+root@rk3318-box:/mnt# sudo fdisk /dev/loop0
+
+Welcome to fdisk (util-linux 2.37.2).
+Changes will remain in memory only, until you decide to write them.
+Be careful before using the write command.
+
+
+Command (m for help): p
+Disk /dev/loop0: 58.24 GiB, 62534975488 bytes, 122138624 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xbb6cf9c7
+
+Device       Boot Start       End   Sectors  Size Id Type
+/dev/loop0p1      32768 120913919 120881152 57.6G 83 Linux
+
+Command (m for help): d
+Selected partition 1
+Partition 1 has been deleted.
+
+Command (m for help): p
+Disk /dev/loop0: 58.24 GiB, 62534975488 bytes, 122138624 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xbb6cf9c7
+
+Command (m for help): n
+Partition type
+   p   primary (0 primary, 0 extended, 4 free)
+   e   extended (container for logical partitions)
+Select (default p): 
+
+Using default response p.
+Partition number (1-4, default 1): 
+First sector (2048-122138623, default 2048): 32768
+Last sector, +/-sectors or +/-size{K,M,G,T,P} (32768-122138623, default 122138623): +8.2G
+
+Created a new partition 1 of type 'Linux' and of size 8.2 GiB.
+Partition #1 contains a ext4 signature.
+
+Do you want to remove the signature? [Y]es/[N]o: N
+
+Command (m for help): W
+W: unknown command
+
+Command (m for help): w
+
+The partition table has been altered.
+Calling ioctl() to re-read partition table.
+Re-reading the partition table failed.: Invalid argument
+
+The kernel still uses the old table. The new table will be used at the next reboot or after you run partprobe(8) or partx(8).
+
+root@rk3318-box:/mnt# sudo e2fsck -f /dev/loop0p1
+e2fsck 1.46.5 (30-Dec-2021)
+Pass 1: Checking inodes, blocks, and sizes
+Inode 1460 extent tree (at level 1) could be narrower.  Optimize<y>? yes
+Pass 1E: Optimizing extent trees
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+
+/dev/loop0p1: ***** FILE SYSTEM WAS MODIFIED *****
+/dev/loop0p1: 270209/535392 files (0.3% non-contiguous), 1679905/2130514 blocks
+root@rk3318-box:/mnt# sudo e2fsck -f /dev/loop0p1
+e2fsck 1.46.5 (30-Dec-2021)
+Pass 1: Checking inodes, blocks, and sizes
+Pass 2: Checking directory structure
+Pass 3: Checking directory connectivity
+Pass 4: Checking reference counts
+Pass 5: Checking group summary information
+/dev/loop0p1: 270209/535392 files (0.3% non-contiguous), 1679905/2130514 blocks
+root@rk3318-box:/mnt# sudo partprobe /dev/loop0
+root@rk3318-box:/mnt# sudo fdisk -l /dev/loop18
+fdisk: cannot open /dev/loop18: No such file or directory
+root@rk3318-box:/mnt# sudo fdisk -l /dev/loop0
+Disk /dev/loop0: 58.24 GiB, 62534975488 bytes, 122138624 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xbb6cf9c7
+
+Device       Boot Start      End  Sectors  Size Id Type
+/dev/loop0p1      32768 17229823 17197056  8.2G 83 Linux
+root@rk3318-box:/mnt# sudo losetup -d /dev/loop0
+root@rk3318-box:/mnt# fdisk -l eaidk310.img 
+Disk eaidk310.img: 58.24 GiB, 62534975488 bytes, 122138624 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0xbb6cf9c7
+
+Device        Boot Start      End  Sectors  Size Id Type
+eaidk310.img1      32768 17229823 17197056  8.2G 83 Linux
+root@rk3318-box:/mnt# truncate --size=$[(17229823+1)*512] eaidk310.img
