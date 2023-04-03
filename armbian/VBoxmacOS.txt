@@ -1,0 +1,22 @@
+$ cd "C:\Program Files\Oracle\VirtualBox\"
+	 
+$ VBoxManage modifyvm "macOS" --cpuidset 00000001 000106e5 00100800 0098e3fd bfebfbff 
+ 
+$ VBoxManage setextradata "macOS" "VBoxInternal/Devices/efi/0/Config/DmiSystemProduct" "MacBookPro15,1"
+ 
+$ VBoxManage setextradata "macOS" "VBoxInternal/Devices/efi/0/Config/DmiSystemVersion" "1.0"
+ 
+$ VBoxManage setextradata "macOS" "VBoxInternal/Devices/efi/0/Config/DmiBoardProduct" "Mac-551B86E5744E2388"
+ 
+$ VBoxManage setextradata "macOS" "VBoxInternal/Devices/smc/0/Config/DeviceKey" "ourhardworkbythesewordsguardedpleasedontsteal(c)AppleComputerInc"
+ 
+$ VBoxManage setextradata "macOS" "VBoxInternal/Devices/smc/0/Config/GetKeyFromRealSMC" 1
+ 
+# TSC (Time Stamp Counter)，如果安装或者运行过程中各种崩溃，大概率修改这个参数可以解决问题
+$ VBoxManage setextradata "macOS" "VBoxInternal/TM/TSCMode" "RealTSCOffset"
+ 
+# 如果是使用 AMD CPU 的电脑，加入下面这一行
+$ VBoxManage modifyvm "macOS" --cpu-profile "Intel Core i7-6700K"
+ 
+# 如果需要的话，调整分辨率
+$ VBoxManage setextradata "macOS" "VBoxInternal2/EfiGraphicsResolution" "1366x768"
