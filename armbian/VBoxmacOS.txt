@@ -20,3 +20,28 @@ $ VBoxManage modifyvm "macOS" --cpu-profile "Intel Core i7-6700K"
  
 # 如果需要的话，调整分辨率
 $ VBoxManage setextradata "macOS" "VBoxInternal2/EfiGraphicsResolution" "1366x768"
+
+
+
+DMG转ISO
+##
+macOS Monterey                            https://apps.apple.com/cn/app/macos-monterey/id1576738294?ls=1&mt=12
+
+macOS BigSur 11.6.1                    https://apps.apple.com/cn/app/macos-big-sur/id1526878132?ls=1&mt=12
+
+macOS Catalina 10.15.7               https://apps.apple.com/cn/app/macos-catalina/id1466841314?ls=1&mt=12
+
+macOS Mojave 10.14.6                https://apps.apple.com/cn/app/macos-mojave/id1398502828?ls=1&mt=12
+
+macOS High Sierra 10.13.6        https://apps.apple.com/cn/app/macos-high-sierra/id1246284741?ls=1&mt=12
+
+macOS Sierra 10.12.6                   https://apps.apple.com/cn/app/macos-sierra/id1127487414?ls=1&mt=12
+##
+ 
+1. hdiutil create -o ~/Desktop/macOS\ Monterey -size 5.8GB -layout SPUD -fs HFS+J
+2. hdiutil attach ~/Desktop/macOS\ Monterey.dmg -noverify -mountpoint /Volumes/macOS\ Monterey
+3. sudo /Applications/Install\ macOS\ Monterey.app/Contents/Resources/createinstallmedia --volume /Volumes/macOS\ Monterey
+4. hdiutil detach /Volumes/Install\ macOS\ Monterey
+5. hdiutil convert ~/Desktop/macOS\ Monterey.dmg -format UDTO -o ~/Desktop/macOS\ Monterey
+6. mv ~/Desktop/macOS\ Monterey.cdr ~/Desktop/macOS\ Monterey.iso
+7. rm ~/Desktop/macOS\ Monterey.dmg
