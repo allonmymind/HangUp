@@ -27,8 +27,8 @@ dotenv
 json5	
 
 
-## python 
-aiohttp	
+## python pip3 install --upgrade pip
+aiohttp	  
 ping3	
 jd_sign	
 canvas	
