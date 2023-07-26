@@ -1,0 +1,14 @@
+version: '3'
+services:
+  alist:
+    container_name: alist
+    image: xhofe/alist-aria2:latest
+    restart: always
+    ports:
+      - "5244:5244"
+    environment:
+      - PUID=0
+      - PGID=0
+      - UMASK=022
+    volumes:
+      - /etc/alist:/opt/alist/data
