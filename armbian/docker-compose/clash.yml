@@ -7,7 +7,7 @@ services:
     environment:
       - TZ=Asia/Shanghai
     volumes:
-      - ./config.yaml:/root/.config/clash/config.yaml
+      - ./conf/config.yaml:/root/.config/clash/config.yaml
     ports:
       - "7890:7890"
       - "7891:7891"
@@ -16,7 +16,7 @@ services:
     restart: always
     # When your system is Linux, you can use `network_mode: "host"` directly.
   yacd:
-    image: centralx/clash-dashboard
+    image:  haishanh/yacd
     container_name: yacd
     ports:
       - "80:80"
