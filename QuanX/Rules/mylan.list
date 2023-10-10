@@ -1,6 +1,7 @@
 IP-CIDR,192.168.168.0/24,局域网
 IP-CIDR,192.168.2.0/24,局域网
 IP-CIDR,192.168.3.0/24,局域网
+IP-CIDR,100.64.0.0/10,局域网
 DOMAIN,*.hangup.tk,局域网
 DOMAIN,*.j-zhou.cn,局域网
 DOMAIN,*.sihang.eu.org,局域网
