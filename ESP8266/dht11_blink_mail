@@ -1,0 +1,172 @@
+#include <Arduino.h>
+#define BLINKER_WIFI
+#define BLINKER_MIOT_SENSOR
+#include <Blinker.h>
+#include <DHT.h>
+
+
+#define DHTPIN 2    //定义引脚D3
+#define DHTTYPE    DHT11
+DHT dht(DHTPIN, DHTTYPE);
+
+char auth[] = "xxx";  //替代为你的密匙
+char ssid[] = "xxx"; //2.4Gwifi名称，可以是手机热点，不要有中文
+char pswd[] = "";//WiFi密码
+
+float humi_read = 0, temp_read = 0;
+//新建数据类型组件
+BlinkerNumber HUMI("humi");
+BlinkerNumber TEMP("temp");
+
+#include <ESP_Mail_Client.h> // 包含ESP-Mail客户端库
+
+#define WIFI_SSID "xxx"
+#define WIFI_PASSWORD ""
+#define SMTP_HOST "smtp.qq.com"
+#define SMTP_PORT 465
+#define AUTHOR_EMAIL "xxx@qq.com"
+#define AUTHOR_PASSWORD "xxxxxxxxx"
+#define SENDER_NAME "NodeMCU"
+#define MAIL_SUBJECT "Temperature and Humidity Alert!!!"  // 邮件主题
+#define RECIPIENT "Recipient"  // 收件人姓名
+#define RECIPIENT_EMAIL "xxxxxxxxxxx"  // 收件人邮箱地址
+
+SMTPSession smtp;  // 创建SMTP会话对象
+ESP_Mail_Session session;  // 创建ESP-Mail会话对象
+unsigned long lastAlertTime = 0; // 上次发送邮件的时间戳
+bool emailSent = false; // 邮件发送标志，true表示已发送，false表示未发送
+
+//心跳包
+void heartbeat()
+{
+    TEMP.print(temp_read);  // 输出温度值到Blinker APP
+    HUMI.print(humi_read);  // 输出湿度值到Blinker APP
+}
+
+// 发送邮件通知函数
+void sendEmailAlert(float temperature, float humidity)
+{
+    SMTP_Message message;
+    message.sender.name = SENDER_NAME;
+    message.sender.email = AUTHOR_EMAIL;
+    message.subject = MAIL_SUBJECT;
+    message.addRecipient(RECIPIENT, RECIPIENT_EMAIL);
+
+    String content = "温度超过阈值: " + String(temperature) + " °C\n";
+    content += "湿度超过阈值: " + String(humidity) + " %\n";
+    content += "请立即采取措施！\n";
+
+    message.text.content = content;
+
+    if (!smtp.connect(&session))
+    {
+        Serial.println("Connection error");
+        return;
+    }
+
+    if (!MailClient.sendMail(&smtp, &message))
+    {
+        Serial.println("Error sending email");
+    }
+    else
+    {
+        Serial.println("Email sent successfully");
+    }
+}
+
+// SMTP发送邮件回调函数
+void smtpCallback(SMTP_Status status)
+{
+    Serial.println(status.info());
+
+    if (status.success())
+    {
+        Serial.println("Email sent successfully");
+    }
+}
+
+void miotQuery(int32_t queryCode)      //
+{
+    BLINKER_LOG("MIOT Query codes: ", queryCode);
+
+    int humi_read_int=humi_read;     //去掉湿度浮点
+    BlinkerMIOT.humi(humi_read_int);     //
+    BlinkerMIOT.temp(temp_read);      //
+    BlinkerMIOT.print();
+}
+
+void setup() {
+    // 初始化串口，并开启调试信息，项目成型后可关闭
+    Serial.begin(115200);
+    BLINKER_DEBUG.stream(Serial);
+    // 初始化有LED的IO
+    pinMode(LED_BUILTIN, OUTPUT);
+    digitalWrite(LED_BUILTIN, HIGH);
+    // 初始化blinker
+    Blinker.begin(auth, ssid, pswd);
+    Blinker.attachHeartbeat(heartbeat);//绑定回调函数
+    dht.begin();
+    BlinkerMIOT.attachQuery(miotQuery);
+
+    WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
+    while (WiFi.status() != WL_CONNECTED)
+    {
+        Serial.print(".");
+        delay(500);
+    }
+    Serial.println("\nWi-Fi connected.");
+    Serial.println("IP Address:");
+    Serial.println(WiFi.localIP());
+    Serial.println();
+
+    smtp.debug(1);
+    smtp.callback(smtpCallback);
+
+    session.server.host_name = SMTP_HOST;
+    session.server.port = SMTP_PORT;
+    session.login.email = AUTHOR_EMAIL;
+    session.login.password = AUTHOR_PASSWORD;
+    session.time.ntp_server = F("ntp1.aliyun.com,time.nist.gov");
+    session.time.gmt_offset = 8;
+    session.time.day_light_offset = 0;
+}
+
+void loop() {
+    Blinker.run();
+    float h = dht.readHumidity();  // 读取温湿度数据
+    float t = dht.readTemperature();
+
+    if (isnan(h) || isnan(t)) {
+        BLINKER_LOG("Failed to read from DHT sensor!");
+    } else {
+        BLINKER_LOG("Temperature: ", t, " *C");  // 串口打印温度数据
+        BLINKER_LOG("Humidity: ", h, " %");  // 串口打印湿度数据
+        humi_read = h;
+        temp_read = t;
+    }
+
+    // 如果温度和湿度超过阈值
+    if (temp_read > 28.0 || humi_read > 60.0) {
+        // 如果邮件未发送过
+        if (!emailSent) {
+            // 发送邮件通知
+            sendEmailAlert(temp_read, humi_read);
+            emailSent = true;  // 设置邮件已发送标志为true
+            lastAlertTime = millis();  // 更新上次发邮件的时间戳
+        } else {
+            // 如果温湿度异常超过五分钟，则再次发送邮件通知
+            if (millis() - lastAlertTime > 5 * 60 * 1000) {
+                sendEmailAlert(temp_read, humi_read);
+                lastAlertTime = millis();  // 更新上次发邮件的时间戳
+            }
+        }
+    } else { // 温度和湿度低于阈值
+        // 如果邮件已发送，且温湿度异常超过五分钟，则重置邮件发送标志和时间戳
+        if (emailSent && (millis() - lastAlertTime > 5 * 60 * 1000)) {
+            emailSent = false;
+            lastAlertTime = 0;  // 重置时间戳
+        }
+    }
+
+    delay(2000);  // 延时2秒
+}
