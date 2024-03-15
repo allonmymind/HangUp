@@ -1,0 +1,29 @@
+下载地址
+Adobe Acrobat Pro DC 2024.001.20604 Update 多国语言更新补丁 (2024/03/13)
+
+x64 https://ardownload2.adobe.com/pub/adobe/acrobat/win/AcrobatDC/2400120604/AcrobatDCx64Upd2400120604.msp
+
+x86 https://ardownload2.adobe.com/pub/adobe/acrobat/win/AcrobatDC/2400120604/AcrobatDCUpd2400120604.msp
+
+Adobe Acrobat DC 2024.001.20604 (Continuous) 多国语言完整版本 (2024/03/13)
+
+x64 https://trials.adobe.com/AdobeProducts/APRO/Acrobat_HelpX/win32/Acrobat_DC_Web_x64_WWMUI.zip
+
+x86 https://trials.adobe.com/AdobeProducts/APRO/Acrobat_HelpX/win32/Acrobat_DC_Web_WWMUI.zip
+
+Adobe Acrobat Pro DC 2023.008.20533 Update 多国语言更新补丁 (2024/02/23)
+
+x64 https://ardownload2.adobe.com/pub/adobe/acrobat/win/AcrobatDC/2300820555/AcrobatDCx64Upd2300820555.msp
+
+x86 https://ardownload2.adobe.com/pub/adobe/acrobat/win/AcrobatDC/2300820555/AcrobatDCUpd2300820555.msp
+
+Adobe Acrobat DC 2023.008.20533 (Continuous) 多国语言完整版本 (2024/02/13)
+
+x64 https://trials.adobe.com/AdobeProducts/APRO/Acrobat_HelpX/win32/Acrobat_DC_Web_x64_WWMUI.zip
+
+x86 https://trials.adobe.com/AdobeProducts/APRO/Acrobat_HelpX/win32/Acrobat_DC_Web_WWMUI.zip
+
+Adobe Acrobat Pro 2017.012.30262 Update 多国语言更新补丁最终版(2022/08/09)
+https://ardownload2.adobe.com/pub/adobe/acrobat/win/Acrobat2017/1701230262/Acrobat2017Upd1701230262.msp
+Adobe Acrobat 2017.011.30175 (Classic) 官方多国语言完整版初始版  (2020/08/09)
+https://trials.adobe.com/AdobeProducts/APRO/Acrobat_HelpX/win32/Acrobat_2017_Web_WWMUI.zip
