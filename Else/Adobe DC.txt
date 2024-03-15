@@ -27,3 +27,21 @@ Adobe Acrobat Pro 2017.012.30262 Update 多国语言更新补丁最终版(2022/0
 https://ardownload2.adobe.com/pub/adobe/acrobat/win/Acrobat2017/1701230262/Acrobat2017Upd1701230262.msp
 Adobe Acrobat 2017.011.30175 (Classic) 官方多国语言完整版初始版  (2020/08/09)
 https://trials.adobe.com/AdobeProducts/APRO/Acrobat_HelpX/win32/Acrobat_2017_Web_WWMUI.zip
+
+
+
+下载地址
+v22.001.20142_x64_CN:
+https://ardownload2.adobe.com/pub/adobe/acrobat/win/AcrobatDC/2200120142/AcroRdrDCx642200120142_zh_CN.exe
+v22.001.20142_x64_US:
+https://ardownload2.adobe.com/pub/adobe/acrobat/win/AcrobatDC/2200120142/AcroRdrDCx642200120142_en_US.exe
+
+v23.001.20143_x64_CN:
+https://ardownload2.adobe.com/pub/adobe/acrobat/win/AcrobatDC/2300120143/AcroRdrDCx642300120143_zh_CN.exe
+v23.001.20143_x64_US:
+https://ardownload2.adobe.com/pub/adobe/acrobat/win/AcrobatDC/2300120143/AcroRdrDCx642300120143_en_US.exe
+————————————————
+
+                            版权声明：本文为博主原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接和本声明。
+                        
+原文链接：https://blog.csdn.net/Jackie_lo/article/details/125536565
