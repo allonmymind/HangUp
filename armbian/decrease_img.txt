@@ -118,8 +118,7 @@ Pass 4: Checking reference counts
 Pass 5: Checking group summary information
 /dev/loop0p1: 270209/535392 files (0.3% non-contiguous), 1679905/2130514 blocks
 root@rk3318-box:/mnt# sudo partprobe /dev/loop0
-root@rk3318-box:/mnt# sudo fdisk -l /dev/loop18
-fdisk: cannot open /dev/loop18: No such file or directory
+
 root@rk3318-box:/mnt# sudo fdisk -l /dev/loop0
 Disk /dev/loop0: 58.24 GiB, 62534975488 bytes, 122138624 sectors
 Units: sectors of 1 * 512 = 512 bytes
