@@ -39,7 +39,7 @@ The filesystem on /dev/loop0p1 is now 2130514 (4k) blocks long.
 root@rk3318-box:/mnt# sudo resize2fs -M /dev/loop0p1
 resize2fs 1.46.5 (30-Dec-2021)
 The filesystem is already 2130514 (4k) blocks long.  Nothing to do!
-
+## 2130514 (4k) blocks -- 2130514*4/1024/1024=8.2G
 root@rk3318-box:/mnt# sudo fdisk /dev/loop0
 
 Welcome to fdisk (util-linux 2.37.2).
@@ -142,3 +142,4 @@ Disk identifier: 0xbb6cf9c7
 Device        Boot Start      End  Sectors  Size Id Type
 eaidk310.img1      32768 17229823 17197056  8.2G 83 Linux
 root@rk3318-box:/mnt# truncate --size=$[(17229823+1)*512] eaidk310.img
+            xz- -z -k eaidk310.img
