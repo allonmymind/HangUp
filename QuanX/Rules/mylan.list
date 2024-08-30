@@ -1,7 +1,9 @@
 IP-CIDR,192.168.168.0/24,局域网
+IP-CIDR,192.168.123.0/24,局域网
+IP-CIDR,192.168.1.0/24,局域网
 IP-CIDR,192.168.2.0/24,局域网
 IP-CIDR,192.168.3.0/24,局域网
-IP-CIDR,100.64.0.0/10,局域网
+IP-CIDR,100.100.168.0/10,局域网
 HOST-SUFFIX,hangup.tk,局域网
 HOST-SUFFIX,j-zhou.cn,局域网
 HOST-SUFFIX,sihang.eu.org,局域网
@@ -11,3 +13,5 @@ HOST-SUFFIX,ddnsto.com,局域网
 HOST-SUFFIX,tocmcc.cn,局域网
 HOST-SUFFIX,kooldns.cn,局域网
 HOST-KEYWORD,allonmymind,局域网
+HOST-KEYWORD,us.kg,局域网
+
