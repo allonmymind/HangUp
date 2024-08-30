@@ -1,3 +1,16 @@
+#rule-providers:
+
+#  MyLan: 
+#    type: http
+#    behavior: classical
+#    url: https://github.com/allonmymind/HangUp/raw/main/clash/mylan.list
+#    path: ./Rule/mylan.list
+#    interval: 86400
+
+#rules:
+#  - RULE-SET,MyLan,MyLan
+
+
 payload:
   - IP-CIDR,192.168.168.0/24
   - IP-CIDR,192.168.123.0/24
