@@ -16,6 +16,7 @@ payload:
   - IP-CIDR,192.168.1.0/24
   - IP-CIDR,192.168.2.0/24
   - IP-CIDR,192.168.3.0/24
+  - IP-CIDR,100.0.0.0/24
   - IP-CIDR,100.100.168.0/10
   - DOMAIN-SUFFIX,hangup.tk
   - DOMAIN-SUFFIX,j-zhou.cn
