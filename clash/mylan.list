@@ -4,7 +4,7 @@ payload:
 #  MyLan: 
 #    type: http
 #    behavior: classical
-#    url: https://github.com/allonmymind/HangUp/raw/main/clash/mylan.list
+#    url: https://git.hangup.eu.org/https://github.com/allonmymind/HangUp/raw/main/clash/mylan.list
 #    path: ./Rule/mylan.list
 #    interval: 86400
 
