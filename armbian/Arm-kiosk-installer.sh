@@ -54,7 +54,7 @@ cat > /home/kiosk/.config/openbox/autostart << EOF
 #!/bin/bash
 
 # 设置你要打开的网址
-KIOSK_URL="http://59.41.215.229:8081/amsTest2/?id=1026-3&passKey=143d242b8db646228ecdbd3fd0795d8c1026-3&wework_cfm_code=MhqF97FF7mzguPrurhxy9eeOJ3WTMxCNWxji5rhvy8G8nPx%2B4yP9ibWQqjyyzesmH4nPze%2FF5Ol3ePEU7diecTLGag1wPDoDSXxAawkqXV0QBWBNXjN5QuH9mYaAcuXN7eUTcUjBH99HhMa9PKXywAt%2BG6nvvXxoNQ%3D%3D"
+KIOSK_URL="url"
 
 # 启动后隐藏鼠标指针（0.1秒无操作后）
 unclutter -idle 0.1 -grab -root &
