@@ -9,6 +9,9 @@ PDF生成模块 (PdfGenerator)
 PDF预览模块 (PdfPreviewer) 
 CSV导出模块 (CsvExporter)
 
+javac -d bin -cp "lib/*" -encoding UTF-8 src/*.java
+java -cp ".;bin;lib/*" AutoFillApp
+
 1. AutoFillApp.java 修改
 
 修正了 dataLoader.loadData 调用问题，并确保所有按钮和表格的绑定正确。
